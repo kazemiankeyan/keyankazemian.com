@@ -29,6 +29,10 @@ a.btn:hover {
   color: #fed136 !important;
 }
 
+.project-image {
+  width: 64px;
+}
+
 h1,
 h2,
 h3,
