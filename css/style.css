@@ -1,14 +1,39 @@
+html {
+  background-color: #1d1e22;
+}
+
 body {
   overflow-x: hidden;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Crimson Pro', serif;
+  background-color: #1d1e22;
+}
+
+#container > * { position:relative; }
+
+#container {
+  height: 100% !important;
+  flex-wrap: wrap;
+}
+
+.more-info {
+  top: 50px;
+  float: left;
+  display:block;
+  margin-left: 30px;
+}
+
+.intro-text {
+  width:100%;
 }
 
 p {
   line-height: 1.75;
+  font-size: 20px;
 }
 
 a {
-  color: #253e21;
+  color: white;
+  text-decoration: underline;
 }
 
 a:hover {
@@ -43,8 +68,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Crimson Pro', serif;
+}
+
+p {
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 25px;
 }
 
 section {
@@ -102,11 +135,11 @@ section h3.section-subheading {
 .btn-primary:active, .btn-primary:focus {
 }
 
-hr {
+/* hr {
   max-width: 50px;
   border-width: 3px;
   border-color: #253e21;
-}
+} */
 
 hr.light {
   border-color: black;
@@ -206,9 +239,9 @@ html, body, .cover {
 }
 
 header.masthead {
-  text-align: center;
   color: white;
-  background-image: url("../img/back.jpg");
+  background-color: #15161a;
+  height: 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -219,8 +252,8 @@ header.masthead {
 }
 
 header.masthead .intro-text {
-  padding-top: 300px;
-  padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 80px;
 }
 
 header.masthead .intro-text .intro-lead-in {
@@ -231,17 +264,19 @@ header.masthead .intro-text .intro-lead-in {
 }
 
 header.masthead .intro-text .intro-heading {
-  font-size: 35px;
-  font-weight: 700;
+  width: 100%;
+  font-size: 30px;
+  margin-left: 20px;
   line-height: 50px;
   margin-bottom: 25px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Crimson Pro', serif;
+  float: left;
 }
 
 @media (min-width: 768px) {
   header.masthead .intro-text {
-    padding-top: 400px;
-    padding-bottom: 200px;
+    padding-top: 100px;
+    padding-bottom: 60px;
   }
   header.masthead .intro-text .intro-lead-in {
     font-size: 25px;
@@ -250,11 +285,10 @@ header.masthead .intro-text .intro-heading {
     font-family: 'Source Serif Pro', serif;
   }
   header.masthead .intro-text .intro-heading {
-    font-size: 55px;
-    font-weight: 700;
+    font-size: 40px;
     line-height: 75px;
     margin-bottom: 5px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Crimson Pro', serif;
   }
 }
 
