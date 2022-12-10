@@ -52,7 +52,10 @@
         <hr>
         <p><a target="_blank" href="https://twitter.com/keyankazemian">@keyankazemian</a></p>
         </ul>
+        <div class="date">
         </div>
+        </div>
+
         <!-- <span class="intro-lead-in" id="typed"></span> -->
         <!--<div class="intro-lead-in">Software Developer | Photographer | Web Designer | Artist</div>-->
         <!-- <hr> -->
@@ -117,7 +120,7 @@
   <script src="js/grained.js"></script>
 
 
-  <!-- <script>
+  <script>
     $('document').ready(function() {
       var options = {
            animate: true,
@@ -129,15 +132,40 @@
            grainHeight: 0.222
     };
     grained('#cover',options);
-      var typed = new Typed('#typed', {
-        stringsElement: '#typed-strings',
-        backSpeed: 50,
-        typeSpeed: 50,
-        loop: true,
-        backDelay: 1000
-      });
+      // var typed = new Typed('#typed', {
+      //   stringsElement: '#typed-strings',
+      //   backSpeed: 50,
+      //   typeSpeed: 50,
+      //   loop: true,
+      //   backDelay: 1000
+      // });
     });
-  </script> -->
+
+    const desiredRepo = "keyankazemian.com";
+    const dateTagClass = ".date";
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function()
+    {
+      if (this.readyState == 4 && this.status == 200)
+      {
+        let repos = JSON.parse(this.responseText);
+
+        repos.forEach((repo)=>{
+          if (repo.name == desiredRepo)
+          {
+            var lastUpdated = new Date(repo.updated_at);
+            var day = lastUpdated.getUTCDate();
+            var month = lastUpdated.getUTCMonth() + 1;
+            var year = lastUpdated.getUTCFullYear();
+            $(dateTagClass).text(`last updated: ${month}/${day}/${year}`);
+          }
+        });
+      }
+    };
+    xhttp.open("GET", "https://api.github.com/users/kazemiankeyan/repos", true);
+    xhttp.send();
+  </script>
 
 </body>
 

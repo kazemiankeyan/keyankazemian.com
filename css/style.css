@@ -8,14 +8,29 @@ body {
   background-color: #1d1e22;
 }
 
-#container > * { position:relative; }
+/* #container > * { position:relative; } */
+
+#cover::before {
+  pointer-events: none;
+}
+
+#date::before {
+  pointer-events: none;
+}
 
 #container {
   height: 100% !important;
   flex-wrap: wrap;
 }
 
+.date {
+  position: relative;
+  margin-left:45px;
+  top:75px;
+}
+
 .more-info {
+  width: 100%;
   top: 50px;
   float: left;
   display:block;
